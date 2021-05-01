@@ -1,0 +1,56 @@
+<h1 class="logo">Gllrm App</h1>
+<!-- <nav>
+  <ul>
+    <li>
+      <tui-svg class="icon" src="tuiIconStarLarge"></tui-svg>
+      <a
+        class="tui-text_body-l"
+        href="#"
+        routerLink="/dashboard"
+        routerLinkActive="active"
+        >Areas</a
+      >
+    </li>
+    <li>
+      <tui-svg class="icon" src="tuiIconLockLarge"></tui-svg>
+      <a class="tui-text_body-l" href="#" routerLinkActive="active"
+        >Asignaturas</a
+      >
+    </li>
+    <li>
+      <tui-svg class="icon" src="tuiIconLinkLarge"></tui-svg>
+      <a class="tui-text_body-l" href="#" routerLinkActive="active">Grados</a>
+    </li>
+  </ul>
+</nav> -->
+
+<nav>
+  <tui-scrollbar class="scrollbar">
+    <tui-accordion [closeOthers]="false" [rounded]="false">
+      <tui-accordion-item
+        *ngFor="let item of items; index as index"
+        size="m"
+        [borders]="null"
+      >
+        <strong>{{ item.title }}</strong>
+
+        <ng-template tuiAccordionItemContent>
+          <div class="section">
+            <ng-container>
+              <a
+                *ngFor="let subitem of item.children"
+                tuiLink
+                class="sublink"
+                routerLinkActive="sublink_active"
+                [routerLink]="subitem.route"
+                (click)="toggleMenu(subitem)"
+              >
+                {{ subitem.title }}
+              </a>
+            </ng-container>
+          </div>
+        </ng-template>
+      </tui-accordion-item>
+    </tui-accordion>
+  </tui-scrollbar>
+</nav>

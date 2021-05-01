@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@taiga-ui/core/styles/taiga-ui-local";
+:root {
+  box-sizing: content-box;
+}
+body {
+  font: var(--tui-font-text-m) !important;
+}
+
+@mixin text-basic() {
+  @include text-body-m();
+  color: var(--tui-text-01);
+}
+
+.header_open {
+  background: var(--tui-base-02);
+}

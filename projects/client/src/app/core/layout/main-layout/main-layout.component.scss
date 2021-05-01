@@ -1,0 +1,29 @@
+.wrapper {
+  display: grid;
+  grid-template:
+    "navbar  header"
+    "navbar  main";
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 60px 1fr;
+  height: 100vh;
+}
+
+gllrm-navigation {
+  grid-area: navbar;
+}
+
+gllrm-header {
+  grid-area: header;
+  // background-color: var(--tui-base-02);
+  padding-left: 1rem;
+}
+
+main {
+  grid-area: main;
+  // background-color: var(--tui-base-02);
+  padding-left: 1rem;
+}
+
+html {
+  height: 100%;
+}
