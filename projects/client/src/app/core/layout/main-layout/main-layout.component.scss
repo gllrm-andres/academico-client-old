@@ -4,7 +4,7 @@
     "navbar  header"
     "navbar  main";
   grid-template-columns: 300px 1fr;
-  grid-template-rows: 60px 1fr;
+  grid-template-rows: 80px 1fr;
   height: 100vh;
 }
 
@@ -16,6 +16,7 @@ gllrm-header {
   grid-area: header;
   // background-color: var(--tui-base-02);
   padding-left: 1rem;
+  margin-bottom: 5rem;
 }
 
 main {

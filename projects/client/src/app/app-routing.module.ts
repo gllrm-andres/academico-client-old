@@ -9,6 +9,13 @@ const routes: Routes = [
         (m) => m.DashboardModule
       ),
   },
+  {
+    path: 'configuracion',
+    loadChildren: () =>
+      import('./features/configuraciones/configuraciones.module').then(
+        (m) => m.ConfiguracionesModule
+      ),
+  },
 
   {
     path: '',

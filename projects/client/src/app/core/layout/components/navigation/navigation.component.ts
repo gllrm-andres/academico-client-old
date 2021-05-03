@@ -24,7 +24,7 @@ export class NavigationComponent implements OnInit {
       children: [
         {
           title: 'Areas',
-          route: '/areas',
+          route: '/configuracion/areas',
         },
         {
           title: 'Asignaturas',
